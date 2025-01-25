@@ -5,7 +5,7 @@ class User(db.Model):
     name = db.Column(db.String(50), nullable= False)
     email = db.Column(db.String(50), unique= True, nullable= False)
     
-    def __init__(self):
+    def __init__(self,name,email):
         self.name = name
         self.email = email
     
@@ -15,6 +15,3 @@ class User(db.Model):
             "name": self.name,
             "email": self.email,
         }
-        
-    
-    
